@@ -1,0 +1,19 @@
+ASIGNATURA { 
+  font-family : New Times Roman; 
+  font-size : 14pt; 
+  display : block; 
+  margin-bottom : 20pt
+}
+NOMBRE { 
+  font-family : Arial; 
+  font-weight : bold ;
+  display : block;
+}
+CREDITOS { 
+  font-style : italic 
+}
+PERIODO { 
+  display : block; 
+  font-style : italic 
+} 
+

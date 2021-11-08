@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File name: Clase.xml -->
+<?xml-stylesheet type="text/css" href="Clase.css"?>
+<CURSO>
+  <ASIGNATURA>
+    <NOMBRE>Logica</NOMBRE>
+    <CREDITOS>8</CREDITOS>
+    <PROFESOR>Javier Leach</PROFESOR>
+    <PERIODO>1er Cuatrimestre</PERIODO>
+    <HORARIO>LMX 15-16</HORARIO>
+  </ASIGNATURA>
+  <ASIGNATURA>
+    <NOMBRE>Introduccion a la programacion</NOMBRE>
+    <CREDITOS>10</CREDITOS>
+    <PROFESOR>Luis Hernandez</PROFESOR>
+    <PERIODO>Anual</PERIODO>
+    <HORARIO>LMX 16-17</HORARIO>
+  </ASIGNATURA>
+  <ASIGNATURA>
+    <NOMBRE>Laboratorio de programacion</NOMBRE>
+    <CREDITOS>12</CREDITOS>
+    <PROFESOR>Luis Hernandez</PROFESOR>
+    <PERIODO>2do Cuatrimestre</PERIODO>
+    <HORARIO>LMX 15-16</HORARIO>
+  </ASIGNATURA>
+  <ASIGNATURA>
+    <NOMBRE>Laboratorio de programacion</NOMBRE>
+    <CREDITOS>12</CREDITOS>
+    <PROFESOR>Luis Hernandez</PROFESOR>
+    <PERIODO>2do Cuatrimestre</PERIODO>
+    <HORARIO>LMX 15-16</HORARIO>
+  </ASIGNATURA>
+  
+</CURSO> 

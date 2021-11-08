@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type = "text/xsl" href = "Horario.xsl"?>
+<!-- File name: Horario.xml -->
+<CURSO>
+    <ASIGNATURA>
+     <NOMBRE>Programacion WEB</NOMBRE>
+     <CREDITOS>8</CREDITOS>
+     <PROFESOR CATEGORIA="Catedratico" EMAIL="jhdzrdz@hotmail.com"     TELEFONO="912345679">
+     Jorge Hdz Rdz
+     </PROFESOR>
+     <PERIODO>6to. Semestre</PERIODO>
+     <HORARIO>L-V 15-16</HORARIO>
+    </ASIGNATURA>
+
+    <ASIGNATURA>
+     <NOMBRE>Comercio Electronica</NOMBRE>
+     <CREDITOS>8</CREDITOS>
+     <PROFESOR CATEGORIA="Titular"  EMAIL="jlreyez@hotmail.com"   TELEFONO="912345678">
+     Jorge Luis Reyez
+     </PROFESOR>
+     <PERIODO>Semestre</PERIODO>
+     <HORARIO>L-X 16-17</HORARIO>
+    </ASIGNATURA>
+    <ASIGNATURA>
+     <NOMBRE>Seguridad en Redes</NOMBRE>
+     <CREDITOS>8</CREDITOS>
+     <PROFESOR CATEGORIA="Titular" EMAIL="lino@hotmail.com">
+     Lino Hernandez
+     </PROFESOR>
+     <PERIODO>8vo. Semestre</PERIODO>
+     <HORARIO>L-V 18-19</HORARIO>
+    </ASIGNATURA>
+</CURSO>
