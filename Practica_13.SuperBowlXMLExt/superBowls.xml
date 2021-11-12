@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="plantilla.xsl"?>
+<season>
+    <bowl>
+        <number>I</number>
+        <year>1967</year>
+        <winner>Packers</winner>
+        <winscore>35</winscore>
+        <loser>Chiefs</loser>
+        <losscore>10</losscore>
+    </bowl>
+    <bowl>
+        <number>II</number>
+        <year>1968</year>
+        <winner>Packers</winner>
+        <winscore>33</winscore>
+        <loser>Raiders</loser>
+        <losscore>14</losscore>
+    </bowl>
+    <bowl>
+        <number>III</number>
+        <year>1969</year>
+        <winner>Jets</winner>
+        <winscore>16</winscore>
+        <loser>Colts(Balto)</loser>
+        <losscore>7</losscore>
+    </bowl>
+    <bowl>
+        <number>IV</number>
+        <year>1970</year>
+        <winner>Chiefs</winner>
+        <winscore>23</winscore>
+        <loser>Vikings</loser>
+        <losscore>7</losscore>
+    </bowl>
+    <bowl>
+        <number>V</number>
+        <year>1971</year>
+        <winner>Colts(Balto)</winner>
+        <winscore>16</winscore>
+        <loser>Cowboys</loser>
+        <losscore>13</losscore>
+    </bowl>	
+</season>

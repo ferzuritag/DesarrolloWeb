@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<TITLE>Cookies</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="cookies.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+function cargarDatos() {
+  document.datos.nombre.value = dameValor("nombre");
+  document.datos.edad.value = dameValor("edad");
+  document.datos.dir.value = dameValor("dir");
+  document.datos.ciudad.value = dameValor("ciudad");
+  document.datos.codPostal.value = dameValor("codPostal");
+  document.datos.telef.value = dameValor("telef");
+  document.datos.email.value = dameValor("email");
+  opcion = dameValor("opcion");
+  if(opcion != "") document.datos.medio.selectedIndex = opcion;
+  document.datos.nombre.focus();
+  document.datos.nombre.select();
+}
+function registrarDatos() {
+  ponValor("nombre",document.datos.nombre.value);
+  ponValor("edad",document.datos.edad.value);
+  ponValor("dir",document.datos.dir.value);
+  ponValor("ciudad",document.datos.ciudad.value);
+  ponValor("codPostal",document.datos.codPostal.value);
+  ponValor("telef",document.datos.telef.value);
+  ponValor("email",document.datos.email.value);
+  ponValor("opcion",document.datos.medio.selectedIndex);
+}
+function olvidarDatos() {
+  borraValor("nombre");
+  borraValor("edad");
+  borraValor("dir");
+  borraValor("ciudad");
+  borraValor("codPostal");
+  borraValor("telef");
+  borraValor("email");
+  borraValor("opcion");
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H2 ALIGN="center">Información de contacto</H2>
+<FORM NAME="datos">
+<TABLE ALIGN="center" WIDTH="100%" CELLSPACING="0" CELLPADDING="5" BORDER="0">
+<TR>
+<TD WIDTH="40%" ALIGN="right" VALIGN="bottom">Nombre</TD>
+<TD VALIGN="bottom"><INPUT TYPE="text" NAME="nombre" SIZE="40"></TD></TR>
+<TR>
+<TD ALIGN="right" VALIGN="bottom">Edad</TD>
+<TD VALIGN="bottom"><INPUT TYPE="text" NAME="edad" SIZE="4"></TD></TR>
+<TR>
+<TD ALIGN="right" VALIGN="top">Dirección</TD>
+<TD VALIGN="bottom"><INPUT TYPE="text" NAME="dir" SIZE="40"></TD></TR>
+<TR>
+<TD ALIGN="right" VALIGN="top">Ciudad</TD>
+<TD VALIGN="bottom"><INPUT TYPE="text" NAME="ciudad" SIZE="20"></TD></TR>
+<TR>
+<TD ALIGN="right" VALIGN="top">Código Postal</TD>
+<TD VALIGN="bottom"><INPUT TYPE="text" NAME="codPostal" SIZE="8"></TD></TR>
+<TR>
+<TD ALIGN="right" VALIGN="bottom">Teléfono de contacto</TD>
+<TD VALIGN="bottom"><INPUT TYPE="text" NAME="telef" SIZE="10"></TD></TR>
+<TR>
+<TD ALIGN="right" VALIGN="bottom">Correo electrónico</TD>
+<TD VALIGN="bottom"><INPUT TYPE="text" NAME="email" SIZE="15"></TD></TR>
+<TR>
+<TD ALIGN="right" VALIGN="bottom">¿Cómo nos encontró?</TD>
+<TD VALIGN="bottom">
+<SELECT NAME="medio">
+  <OPTION>Buscando por la red</OPTION>
+  <OPTION>Por un vínculo en otra página</OPTION>
+  <OPTION>Por un anuncio</OPTION></SELECT></TD></TR>
+<TR>
+<TD COLSPAN="2" ALIGN="center"><BR>
+<INPUT TYPE="submit" VALUE="Enviar datos">&nbsp;
+<INPUT TYPE="reset" VALUE="Empezar de nuevo"><BR><BR>
+<INPUT TYPE="button" VALUE="Cargar datos" onClick="cargarDatos()">&nbsp;
+<INPUT TYPE="button" VALUE="Registrar datos" onClick="registrarDatos()">&nbsp;
+<INPUT TYPE="button" VALUE="Olvidar datos" onClick="olvidarDatos()"></TD></TR>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

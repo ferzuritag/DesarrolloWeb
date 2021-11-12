@@ -1,0 +1,47 @@
+<script>
+
+function setCookie(CookieName,CookieValue,ExpDate,Domain,Path,Security)
+{
+	var CookieData = CookieName;
+	//store letters and numbers as themselves, but store any
+	//symbols or spaces in the cookie value as an ASCII code
+	CookieData = CookieData + "=" + escape(CookieValue);
+	//check for optional parameters values
+	if (ExpDate.value != "") CookieData = CookieData + "; expires=" + ExpDate.toGMTString();
+	if (Domain != "")	CookieData = CookieData + "; domain=" + Domain;
+	if (Path != "") CookieData = CookieData + "; path=" + Path;
+	if (Security == "secure") CookieData = CookieData + "; secure"
+	//insert the cookie in the cookie file
+	document.cookie = CookieData;
+	return ;
+}
+
+function visitorSignIn(Form)
+{
+	if (Form.fname.value == "") return false;
+	if (Form.lname.value == "") return false;
+	if (Form.email.value == "") return false;
+	//Generate an expiration date one year from today
+	var ExpDate = new Date ();
+	ExpDate.setTime (ExpDate.getTime() + (365 * 24 * 60 * 60 * 1000));
+	//Write the cookies that store the first name, last name,
+	//and e-mail address
+	setCookie("FirstName",Form.fname.value,ExpDate,"","/","");
+	setCookie("LastName",Form.lname.value,ExpDate,"","/","");
+	setCookie("eMailAddr",Form.email.value,ExpDate,"","/","");
+	//load another Web page
+	self.location = "htdocs/LoggedIn.htm"
+}
+</script>
+<form name="RegistrationForm">
+	<table>
+		<tr><td>Nombre(s):</td>
+		<td><input type="text" name="fname" size="20"></td></tr>
+		<tr><td>Apellidos:</td>
+		<td><input type="text" name="lname" size="20"></td></tr>
+		<tr><td>E-mail:</td>
+		<td><input type="text" name="email" size="20"></td></tr>
+		<tr><td><input type = "button" value = "Register"
+		onClick="visitorSignIn(RegistrationForm)"></td></tr>
+	</table>
+</form>

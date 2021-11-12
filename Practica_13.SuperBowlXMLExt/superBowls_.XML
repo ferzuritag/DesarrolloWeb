@@ -1,0 +1,51 @@
+<?xml version="1.0"?> 
+<horario>
+    <clase>
+        <materia>Programacion WEB</materia>
+        <creditos>8</creditos>
+        <profesor>Jorge Hernandez Rodriguez</profesor>
+        <periodo>7 Semestre</periodo>
+        <hora>Lunes a Jueves: 15:00-16:00 y Viernes: 12:00-14:00</hora>
+    </clase>
+    
+    <clase>
+        <materia>Sistemas Operativos</materia>
+        <creditos>10</creditos>
+        <profesor>Ricardo Espinosa Saldivar</profesor>
+        <periodo>7 Semestre</periodo>
+        <hora>Lunes a Viernes: 16:00-17:00</hora>
+    </clase>
+    
+    <clase>
+        <materia>Graficacion</materia>
+        <creditos>8</creditos>
+        <profesor>Jose Lino Hernandez Omana</profesor>
+        <periodo>7 Semestre</periodo>
+        <hora>Lunes a Viernes: 17:00-18:00</hora>
+    </clase>
+    
+    <clase>
+        <materia>Planificacion y Modelado</materia>
+        <creditos>8</creditos>
+        <profesor>Guadalupe Geronimo Gernonimo</profesor>
+        <periodo>7 Semestre</periodo>
+        <hora>Lunes a Viernes: 19:00-20:00</hora>
+    </clase>
+    
+    <clase>
+        <materia>Conf. y Ev. Del Rend. de Sis.</materia>
+        <creditos>8</creditos>
+        <profesor>No Asignado</profesor>
+        <periodo>7 Semestre</periodo>
+        <hora>Lunes a Viernes: 16:00-17:00</hora>
+    </clase>
+
+    <clase>
+        <materia>Contabilidad Financiera</materia>
+        <creditos>8</creditos>
+        <profesor>Susano</profesor>
+        <periodo>7 Semestre</periodo>
+        <hora>Lunes a Viernes: 13:00-14:00</hora>
+    </clase>
+	
+</horario>

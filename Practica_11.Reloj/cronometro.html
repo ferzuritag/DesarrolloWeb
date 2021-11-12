@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Cronómetro digital</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+horas=0; minutos=0; segundos=0; puntos=true;
+function Tiempo() 
+  {
+   if(puntos) ++segundos;
+   if(segundos==60) { segundos=0; ++minutos }
+   if(minutos==60) { minutos=0; ++horas }
+   if(horas==24) horas=0;
+   cad="";
+   if(horas<10) cad+="0";
+   cad+=horas;
+   if(puntos) cad+=":"; else cad+=" ";
+   if(minutos<10) cad+="0";
+   cad=cad+minutos;
+   if(puntos) cad+=":"; else cad+=" ";
+   if(segundos<10) cad+="0";
+   cad=cad+segundos;
+   puntos=!puntos;
+   document.crono.boton.value=cad;
+  }
+var id;
+function sigue() { id=setInterval("Tiempo()",500) }
+function para() { clearInterval(id) }
+</SCRIPT>
+</HEAD>
+<BODY>
+<H2 ALIGN="center">Un cronómetro digital</H2>
+<DIV ALIGN="center">
+<FORM NAME="crono">
+<INPUT TYPE="button" NAME="boton" VALUE="00:00:00">
+<BR><BR>
+<INPUT TYPE="button" VALUE="Iniciar" onClick="sigue()">
+<INPUT TYPE="button" VALUE="Detener" onClick="para()">
+</FORM>
+</DIV>
+</BODY>
+</HTML

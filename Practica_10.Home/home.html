@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <META http-equiv="Content-Script-Type"
+   content="text/javascript">
+   <title>Eventos Buttons</title>
+   <script type="text/javascript">
+   // Activar la imagen especificada
+   function activate(bname) {
+      imageid = bname + "button";
+      aname = bname + "-on.jpg";
+      document.images(imageid).src = aname;
+   }
+   // Desactiva la imagen especificada
+   function deactivate(bname) {
+      imageid = bname + "button";
+      dname = bname + "-off.jpg"
+      document.images(imageid).src = dname;
+   }
+   </script>
+</head>
+<body>
+<p>
+<img alt="Home page" id="homebutton"
+   src="home-off.jpg"
+   onmouseover="activate('home')"
+   onmouseout="deactivate('home')"
+   onclick="document.location='home.html'"
+>
+</p>
+</form>
+</body>
+</html>

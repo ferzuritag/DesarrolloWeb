@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Horario del Alumno - Agosto-Diciembre 2011</title>
+<style type="text/css">
+body {background-color:#ffffff}
+table {table-collapse:collapse; border-spacing:0}
+td {border:2px groove black; padding:30px}
+th {border:2px groove black; padding:7px}
+.ctr {text-align:center}
+</style>
+<script language="JavaScript" type="text/javascript">
+// global reference to XML document object
+var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+var fso = new ActiveXObject("Scripting.FileSystemObject");	
+  
+// Draw table from xDoc document tree data
+function drawTable(tbody) {
+    var tr, td, i, j, oneRecord;
+    tbody = document.getElementById(tbody);
+    // node tree
+    var data = xmlDoc.getElementsByTagName("horario")[0];
+    // for td class attributes
+    var classes = ["ctr","","","","ctr"];
+    for (i = 0; i < data.childNodes.length; i++) {
+        // use only 1st level element nodes
+        if (data.childNodes[i].nodeType == 1) {
+            // one bowl record
+            oneRecord = data.childNodes[i];
+            tr = tbody.insertRow(tbody.rows.length);
+            td = tr.insertCell(tr.cells.length);
+            td.setAttribute("class",classes[tr.cells.length-1]);
+
+            td.innerHTML = 
+              oneRecord.getElementsByTagName("materia")[0].firstChild.nodeValue;
+            td = tr.insertCell(tr.cells.length);
+            td.setAttribute("class",classes[tr.cells.length-1]);
+
+            td.innerHTML = 
+              oneRecord.getElementsByTagName("creditos")[0].firstChild.nodeValue;
+            td = tr.insertCell(tr.cells.length);
+            td.setAttribute("class",classes[tr.cells.length-1]);
+
+            td.innerHTML = 
+              oneRecord.getElementsByTagName("profesor")[0].firstChild.nodeValue;
+            td = tr.insertCell(tr.cells.length);
+            td.setAttribute("class",classes[tr.cells.length-1]);
+
+            td.innerHTML = 
+              oneRecord.getElementsByTagName("periodo")[0].firstChild.nodeValue;
+            td = tr.insertCell(tr.cells.length);
+            td.setAttribute("class",classes[tr.cells.length-1]);
+
+
+            td.innerHTML = 
+              oneRecord.getElementsByTagName("hora")[0].firstChild.nodeValue;
+        }
+    }
+}
+// verify that browser supports XML features and load external .xml file
+function verifySupport(xFile) {
+    xmlDoc.load(xFile);
+    if (typeof ActiveXObject != "undefined") {
+        // make sure real object is supported (sorry, IE5/Mac)
+        if (document.getElementById("msxml").async) {
+            xmlDoc = new ActiveXObject("Msxml.DOMDocument");
+        }
+    }
+    if (xmlDoc && typeof xmlDoc.load != "undefined") {
+        // load external file (from same domain)
+        xmlDoc.load(xFile);
+        return true;
+    } else {
+        var reply = confirm("This example requires a browser with XML " + 
+                    "support, such as IE5+/Windows or Netscape 6+.\n \n" +
+                    "Go back to previous page?");
+        if (reply) {
+            history.back( );
+        }
+    }
+    return xmlDoc;
+}
+  
+// initialize first time -- invoked onload
+function init(xFile) {
+    // confirm browser supports needed features and load .xml file
+    if (verifySupport(xFile)) {
+        // let file loading catch up to execution thread
+        setTimeout("drawTable('bowlData')", 1000);
+    }
+}
+</script>
+</head>
+<body onload="init('HorarioTabla.xml');">
+<h1>Horario de Clases: Carlos Eduardo Dimas Lim�n</h1>
+<hr>
+<table id="bowlGames">
+<thead>
+<tr><th>Nombre</th>
+    <th>Creditos</th>
+    <th>Profesor</th>
+    <th>Periodo</th>
+    <th>Horario</th>
+</tr>
+</thead>
+<tbody id="bowlData"></tbody>
+</table>
+<!-- Try to load Msxml.DOMDocument ActiveX to assist support verification -->
+<object id="msxml" WIDTH="1" HEIGHT="1" 
+classid="CLSID:2933BF90-7B36-11d2-B20E-00C04F983E60" ></object>
+</body>
+</html>

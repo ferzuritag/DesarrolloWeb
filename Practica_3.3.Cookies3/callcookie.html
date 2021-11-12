@@ -1,0 +1,37 @@
+<SCRIPT LANGUAGE="JavaScript"> 
+function setCookie(name, value, expires, path, domain, secure) {
+  document.cookie = name + "=" + escape(value) + 
+    ((expires) ? "; expires=" + expires.toGMTString() : "") + 
+    ((path) ? "; path=" + path : "") + 
+    ((domain) ? "; domain=" + domain : "") + 
+    ((secure) ? "; secure" : ""); 
+} 
+</SCRIPT>
+
+
+
+<HTML> 
+<HEAD> 
+<TITLE>Using the setCookie function</TITLE> 
+<SCRIPT LANGUAGE="JavaScript"> 
+function setCookie(name, value, expires, path, domain, secure) {
+  document.cookie = name + "=" + escape(value) + 
+    ((expires) ? "; expires=" + expires.toGMTString() : "") + 
+    ((path) ? "; path=" + path : "") + 
+    ((domain) ? "; domain=" + domain : "") + 
+    ((secure) ? "; secure" : ""); 
+} 
+</SCRIPT> 
+</HEAD> 
+<BODY> 
+Tecle la Identificacion del usuario, y al darle click al Boton del Cookie.
+Un COOKIE sera creado para ti. 
+<BR> 
+<FORM> 
+ID del Usuario: <INPUT TYPE=TEXT NAME=UserID> 
+<BR> 
+<INPUT TYPE=BUTTON VALUE="Crear Cookie" 
+onClick='setCookie("UserID", document.forms[0].UserID.value);'> 
+</FORM> 
+</BODY> 
+</HTML>

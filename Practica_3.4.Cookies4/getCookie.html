@@ -1,0 +1,41 @@
+<script>
+function cookieValue(FirstChar)
+{
+	//Semicolons separate the cookie name/value pairs in
+	//document.cookie property. Find the index of first
+	//semicolon that follows the start of the cookie value
+	var LastChar = document.cookie.indexOf (";", FirstChar);
+	if (LastChar == -1)	  LastChar = document.cookie.length;
+	return unescape(document.cookie.substring(FirstChar, LastChar));
+}
+
+function getCookieValue(CookieName)
+{
+	CookieName = CookieName + "=";
+	var NameLength = CookieName.length;
+	var CookieLength = document.cookie.length;
+	var FirstChar = 0;
+	var LastChar = 0;
+	while (FirstChar < CookieLength)
+	{
+	  LastChar = FirstChar + NameLength;
+	  if(document.cookie.substring(FirstChar, LastChar) == CookieName)	  return cookieValue (LastChar);
+	  //go 1 character past the space between cookie name/value pairs
+	  FirstChar = document.cookie.indexOf(" ", FirstChar) + 1;
+	  if (FirstChar == 0) break;
+	}
+	return null;
+}
+//-->
+</script>
+
+
+<script>
+
+	document.RegForm.fname.value = getCookieValue("FirstName");
+	document.RegForm.lname.value = getCookieValue("LastName");
+	document.RegForm.email.value = getCookieValue("eMailAddr");
+
+
+//-->
+</script>
