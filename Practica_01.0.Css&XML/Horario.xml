@@ -3,31 +3,48 @@
 <!-- File name: Horario.xml -->
 <CURSO>
     <ASIGNATURA>
-     <NOMBRE>Programacion WEB</NOMBRE>
-     <CREDITOS>8</CREDITOS>
-     <PROFESOR CATEGORIA="Catedratico" EMAIL="jhdzrdz@hotmail.com"     TELEFONO="912345679">
-     Jorge Hdz Rdz
-     </PROFESOR>
-     <PERIODO>6to. Semestre</PERIODO>
-     <HORARIO>L-V 15-16</HORARIO>
-    </ASIGNATURA>
-
-    <ASIGNATURA>
-     <NOMBRE>Comercio Electronica</NOMBRE>
-     <CREDITOS>8</CREDITOS>
-     <PROFESOR CATEGORIA="Titular"  EMAIL="jlreyez@hotmail.com"   TELEFONO="912345678">
-     Jorge Luis Reyez
-     </PROFESOR>
-     <PERIODO>Semestre</PERIODO>
-     <HORARIO>L-X 16-17</HORARIO>
+        <NOMBRE>Programacion WEB</NOMBRE>
+        <CREDITOS>5</CREDITOS>
+        <PROFESOR CATEGORIA="Catedratico" EMAIL="jhdzrdz@hotmail.com" TELEFONO="912345679">
+            Jorge Hernandez Rodriguez
+        </PROFESOR>
+        <PERIODO>9eno. Semestre</PERIODO>
+        <HORARIO>L-V 12-13</HORARIO>
     </ASIGNATURA>
     <ASIGNATURA>
-     <NOMBRE>Seguridad en Redes</NOMBRE>
-     <CREDITOS>8</CREDITOS>
-     <PROFESOR CATEGORIA="Titular" EMAIL="lino@hotmail.com">
-     Lino Hernandez
-     </PROFESOR>
-     <PERIODO>8vo. Semestre</PERIODO>
-     <HORARIO>L-V 18-19</HORARIO>
+        <NOMBRE>Dispositivos Moviles</NOMBRE>
+        <CREDITOS>5</CREDITOS>
+        <PROFESOR CATEGORIA="Catedratico" EMAIL="jhdzrdz@hotmail.com" TELEFONO="912345679">
+     Jorge Hernandez Rodriguez
+        </PROFESOR>
+        <PERIODO>9eno. Semestre</PERIODO>
+        <HORARIO>L-V 13-14</HORARIO>
+    </ASIGNATURA>
+    <ASIGNATURA>
+        <NOMBRE>Desarrollo en la Nube</NOMBRE>
+        <CREDITOS>8</CREDITOS>
+        <PROFESOR CATEGORIA="Catedratico" EMAIL="jhdzrdz@hotmail.com" TELEFONO="912345679">
+     Marco Antonio Contreras Vazquez
+        </PROFESOR>
+        <PERIODO>9eno. Semestre</PERIODO>
+        <HORARIO>L-V 19-20</HORARIO>
+    </ASIGNATURA>
+    <ASIGNATURA>
+        <NOMBRE>Internet de las Cosas</NOMBRE>
+        <CREDITOS>8</CREDITOS>
+        <PROFESOR CATEGORIA="Catedratico" EMAIL="jhdzrdz@hotmail.com" TELEFONO="912345679">
+            Osvaldo Daniel Fernandez Bonilla
+        </PROFESOR>
+        <PERIODO>9eno. Semestre</PERIODO>
+        <HORARIO>L-V 16-17</HORARIO>
+    </ASIGNATURA>
+    <ASIGNATURA>
+        <NOMBRE>Big Data</NOMBRE>
+        <CREDITOS>8</CREDITOS>
+        <PROFESOR CATEGORIA="Catedratico" EMAIL="jhdzrdz@hotmail.com" TELEFONO="912345679">
+     Alberto Garcia Morales
+        </PROFESOR>
+        <PERIODO>9eno. Semestre</PERIODO>
+        <HORARIO>L-V 15-16</HORARIO>
     </ASIGNATURA>
 </CURSO>

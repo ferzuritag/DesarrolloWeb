@@ -3,23 +3,23 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
   <xsl:template match="/">
     <html>
-      <body style="width:100vw; height:100vh; display:flex;align-items:center;justify-content: center;flex-direction:column;background-color: #393b43;color:white;margin:0">
-        <h2>Descripción del curso</h2>
+      <body style="width:100vw; height:100vh; display:flex;align-items:center;justify-content: center;flex-direction:column;background-color: #393b43;color:white;margin:0;font-size:12pt">
+        <h1>Descripción del curso de Luis Fernando Zurita González</h1>
         <xsl:for-each select="CURSO/ASIGNATURA">
-          <DIV style="border:1px solid white;width:300px;text-align:center;margin-bottom:10px">
-            <SPAN STYLE="FONT-STYLE: italic">Profesor: </SPAN>
+          <DIV style="border:1px solid white;width:300px;text-align:center;margin-bottom:10px;padding:20px">
+            <SPAN>Profesor: </SPAN>
             <xsl:value-of select="PROFESOR"/>
             <BR/>
-            <SPAN STYLE="FONT-STYLE: italic">Asignatura: </SPAN>
+            <SPAN >Asignatura: </SPAN>
             <xsl:value-of select="NOMBRE"/>
             <BR/>
-            <SPAN STYLE="FONT-STYLE: italic">Creditos: </SPAN>
+            <SPAN >Creditos: </SPAN>
             <xsl:value-of select="CREDITOS"/>
             <BR/>
-            <SPAN STYLE="FONT-STYLE: italic">Horario: </SPAN>
+            <SPAN >Horario: </SPAN>
             <xsl:value-of select="HORARIO"/>
             <BR/>
-            <SPAN STYLE="FONT-STYLE: italic">Periodo: </SPAN>
+            <SPAN >Periodo: </SPAN>
             <xsl:value-of select="PERIODO"/>
             <P/>
           </DIV>

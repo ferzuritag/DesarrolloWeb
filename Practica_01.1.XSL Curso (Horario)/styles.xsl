@@ -5,7 +5,7 @@
     <html>
       <body style="width:100vw; height:100vh; display:flex;align-items:center;justify-content: center;flex-direction:column;background-color: #393b43;color:white;margin:0">
 
-        <h2>Descripción del curso</h2>
+        <h2>Descripción del curso de Luis Fernando Zurita González</h2>
         <xsl:for-each select="CURSO/ASIGNATURA">
           <div style="background-color:#444;width:300px; height:200px;text-align:center;border:1px solid white;display:flex;align-items:center;justify-content:center;flex-direction:column;margin-bottom:10px">
             <div>
