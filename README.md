@@ -10,7 +10,9 @@ que viene en los docs, favor de cambiar los estilos para no tener trabajos igual
 Guia de Estilos:
 
 #background-color: ; <--- Cambia el color de fondo
+
 #color: ;<--- Cambia el color de la letra
+
 #border: 1px solid $color; <--- define un borde, cambiar el parametro color
 
 esos son los estilos que cambiaran a sus colores preferidos, busquen estas propiedades
